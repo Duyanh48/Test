@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập CSS 03</title>
+    <style>
+        .all {
+            text-align: center;
+            height: 600px;
+            background-image: url(https://stockdep.net/files/images/40976153.jpg);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .circle {
+            height: 50px;
+            width: 50px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 2px solid rgb(92, 190, 214);
+            background-image: url(https://freepngimg.com/download/youtube/62519-icons-youtube-envelope-computer-mail-email.png);
+            background-size: cover;
+        }
+        p {
+            font-size: small;
+            font-weight: lighter;
+            z-index: 1;
+        }
+        input {
+            padding-left: 10px;
+            width: 256px;
+            height: 40px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            height: 45px;
+            width: 150px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(82, 221, 196);
+            color: rgb(255, 255, 255);
+            font-size: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        button:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <br>
+        <div class="circle">
+            
+        </div>
+        <h1>Get the invite</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Aliquam viverra orci ut.</p>
+        <input type="email" id="eml" placeholder="Enter Email"> <br>
+        <button type="submit" onclick="Check()">REQUEST INVITE</button>
+    </div>
+</body>
+<script type = "text/javascript">
+    function Check() {
+        var val = document.getElementById('eml').value;
+        var format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(val == "") {
+            alert('Vui lòng nhập email!');
+        } else if (val.match(format)) {
+            alert('Nhập email thành công!');
+        } else {
+            alert('Email không hợp lệ! Vui lòng nhập lại!');
+        }
+    }
+</script>
+</html>
